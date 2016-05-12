@@ -1,0 +1,12 @@
+<div  layout="row">
+  <div class="message" flex-offset-gt-sm="15" flex-gt-sm="70" flex="100">
+    <span ng-if="vm.gameover"><span ng-style="{'background':vm.displayColor}">!!!{{vm.currentPlayer}} has Won!!! </span><a ng-href="javascript:void()" ng-click="vm.restart()">Restart</a></span>
+    <span ng-if="!vm.gameover"><span ng-style="{'background':vm.displayColor}">{{vm.currentPlayer}}'s Turn</span></span>
+  </div>
+</div>
+
+<div  layout="row">
+  <div flex-offset-gt-sm="15" flex-gt-sm="70" flex="100">
+    <board-cmpt current-color="vm.currentColor"></board-cmpt>
+  </div>
+</div>
