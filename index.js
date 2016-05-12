@@ -33,6 +33,9 @@ function($routeProvider) {
     templateUrl: 'app/views/menu.html',
     controller: 'MenuCtrl'
   }).
+  when('/about', {
+    templateUrl: 'app/views/about.html'
+  }).
   otherwise({
     redirectTo: '/menu'
   });

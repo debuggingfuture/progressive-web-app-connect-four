@@ -4,6 +4,8 @@
   "description": "angular 1.5 + webpack + anuglar-material",
   "main": "index.js",
   "scripts": {
+    "start": "webpack && cd dist && python -m SimpleHTTPServer 8080",
+    "dev": "export NODE_ENV='dev'; webpack-dev-server",
     "test": "mocha --compilers js:babel-register 'app/**/*.spec.js'"
   },
   "repository": {
