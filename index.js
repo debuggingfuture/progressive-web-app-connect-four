@@ -16,7 +16,10 @@ import aboutTemplate from 'app/views/about.html';
 angular.module('app', ['ngRoute', 'ngMaterial'])
 .component('boardCmpt', boardCmpt)
 .service('boardSrvc', boardSrvc)
-.controller('MainCtrl', () => {})
+.controller('MainCtrl', function() {
+  let vm = this;
+  vm.finishLoading = true;
+})
 .controller('TwoPlayCtrl', TwoPlayCtrl)
 .controller('MenuCtrl', MenuCtrl)
 .config(['$routeProvider',

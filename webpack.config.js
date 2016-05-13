@@ -3,15 +3,15 @@ var OfflinePlugin = require('offline-plugin');
 var path = require('path');
 
 var offlinePluginOptions = {
-  ServiceWorker:{
-    'entry':'./app/service-worker.js'
+  ServiceWorker: {
+    'entry': './app/service-worker.js'
   },
   onInstalled: (() => console.log(arguments))
 };
 
 var config = {
   entry: {
-    'app':'index.js',
+    'app': 'index.js',
     'vendors': [
       'angular', 'lodash', 'angular-route'
     ]
