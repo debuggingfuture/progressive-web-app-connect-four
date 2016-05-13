@@ -1,4 +1,4 @@
-# progressive-web-app-collect-four
+# progressive-web-app-connect-four
 
 ## start
 -  `npm start` then visit localhost:8080
