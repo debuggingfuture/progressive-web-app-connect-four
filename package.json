@@ -30,6 +30,8 @@
     "eslint-config-google": "^0.5.0",
     "eslint-plugin-import": "^1.8.0",
     "file-loader": "0.8.4",
+    "gulp": "^3.9.1",
+    "gulp-gh-pages": "^0.5.4",
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.10.0",
     "json-loader": "^0.5.4",
@@ -62,8 +64,12 @@
       "new-cap": [
         0
       ],
-      "no-unused-vars":[1],
-      "no-unused-expressions":[0]
+      "no-unused-vars": [
+        1
+      ],
+      "no-unused-expressions": [
+        0
+      ]
     },
     "extends": [
       "google"

@@ -6,7 +6,7 @@ var offlinePluginOptions = {
   ServiceWorker:{
     'entry':'./app/service-worker.js'
   },
-  onInstalled:(()=>console.log(arguments))
+  onInstalled: (() => console.log(arguments))
 };
 
 var config = {
@@ -24,10 +24,10 @@ var config = {
   },
   module: {
     loaders: [
-      { test: /\.css$/, loader: "style-loader!css-loader" },
-      { test: /\.png$/, loader: "url-loader?limit=100000" },
-      { test: /\.(woff(2)?|eot|svg|ttf)$/, loader: "url-loader?limit=100000" },
-      { test: /\.jpg$/, loader: "file-loader" },
+      {test: /\.css$/, loader: "style-loader!css-loader"},
+      {test: /\.png$/, loader: "url-loader?limit=100000"},
+      {test: /\.(woff(2)?|eot|svg|ttf)$/, loader: "url-loader?limit=100000"},
+      {test: /\.jpg$/, loader: "file-loader"},
       {
         test: /\.(js)$/,
         exclude: /(node_modules|bower_components)/,
@@ -53,13 +53,13 @@ var config = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Connect Four',
-      template: 'index.ejs', // Load a custom template
+      template: 'index.ejs' // Load a custom template
       // inject: 'body' // Inject all scripts into the body
-    })
-    // ,new OfflinePlugin(offlinePluginOptions)
+    }),
+    new OfflinePlugin(offlinePluginOptions)
   ]
 
-}
+};
 
 if (process.env.NODE_ENV === 'dev') { // Production
   config['devtool'] = 'eval';
