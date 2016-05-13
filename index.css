@@ -1,13 +1,10 @@
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-  display: none !important;
-}
 .grid{
   background-color:aliceblue;
 }
 .message {
-  font-size: 4em;
-  padding-top:1em;
-  padding-bottom:1em;
+  font-size: 6vh;
+  padding-top:3vh;
+  padding-bottom:3vh;
 }
 .color {
     line-height: 56px;
