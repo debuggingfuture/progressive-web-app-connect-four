@@ -16,28 +16,23 @@ import aboutTemplate from 'app/views/about.html';
 angular.module('app', ['ngRoute', 'ngMaterial'])
 .component('boardCmpt', boardCmpt)
 .service('boardSrvc', boardSrvc)
-.controller('MainCtrl', function() {
-  let vm = this;
-  vm.text = 'Hello world!';
-  vm.finishLoading = true;
-  console.log(vm);
-})
+.controller('MainCtrl', () => {})
 .controller('TwoPlayCtrl', TwoPlayCtrl)
 .controller('MenuCtrl', MenuCtrl)
 .config(['$routeProvider',
 function($routeProvider) {
   $routeProvider
   .when('/2p', {
-    templateUrl: twoPlayTemplate,
+    template: twoPlayTemplate,
     controller: 'TwoPlayCtrl',
     controllerAs: 'vm'
   })
   .when('/menu', {
-    templateUrl: menuTemplate,
+    template: menuTemplate,
     controller: 'MenuCtrl'
   })
   .when('/about', {
-    templateUrl: aboutTemplate
+    template: aboutTemplate
   })
   .otherwise({
     redirectTo: '/menu'
