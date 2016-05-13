@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack && cd dist && python -m SimpleHTTPServer 8080",
     "dev": "export NODE_ENV='dev'; webpack-dev-server",
-    "test": "mocha --compilers js:babel-register 'app/**/*.spec.js'"
+    "test": "mocha --compilers js:babel-register 'app/**/*.spec.js'",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,11 @@
     "babel-register": "^6.8.0",
     "chai": "^3.5.0",
     "css-loader": "^0.23.1",
+    "eslint": "^2.9.0",
+    "eslint-config-google": "^0.5.0",
+    "eslint-plugin-import": "^1.8.0",
     "file-loader": "0.8.4",
+    "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.10.0",
     "json-loader": "^0.5.4",
     "karma": "^0.13.22",
@@ -36,6 +41,7 @@
     "karma-webpack": "^1.7.0",
     "mocha": "^2.4.5",
     "offline-plugin": "^3.2.0",
+    "style-loader": "^0.13.1",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
   },
@@ -46,5 +52,21 @@
     "dotenv": "^2.0.0",
     "html-webpack-plugin": "^2.15.0",
     "localforage": "*"
+  },
+  "eslintConfig": {
+    "rules": {
+      "max-len": [
+        2,
+        100
+      ],
+      "new-cap": [
+        0
+      ],
+      "no-unused-vars":[1],
+      "no-unused-expressions":[0]
+    },
+    "extends": [
+      "google"
+    ]
   }
 }

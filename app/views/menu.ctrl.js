@@ -1,5 +1,1 @@
-export default class MenuCtrl {
-  constructor() {
-
-  }
-}
+export default class MenuCtrl {}
