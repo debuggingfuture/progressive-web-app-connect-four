@@ -5,16 +5,16 @@ import {
     checkAllDirections
 } from './rule.js';
 // Keep i, j matrix conventions but flip at actual data structure for easier insertion
-export let createCells = function(height, width) {
+export const createCells = function(height, width) {
   return Immutable.List(
     Array(width).fill(Immutable.List(Array(height).fill(EMPTY)))
   );
 };
-export let updateCell = function(cells, value, i, j) {
+export const updateCell = function(cells, value, i, j) {
   return cells.updateIn([j, i], () => value);
 };
 
-export let insertCell = function(cells, value, j) {
+export const insertCell = function(cells, value, j) {
   let height = cells.get(j).size;
   let insertedAt = -1;
   for (let i = height - 1; i >= 0; i--) {

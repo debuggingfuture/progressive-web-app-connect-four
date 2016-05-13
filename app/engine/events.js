@@ -1,3 +1,3 @@
-export let TURN = 'turn';
-export let WON = 'won';
-export let RESTART = 'restart';
+export const TURN = 'turn';
+export const WON = 'won';
+export const RESTART = 'restart';

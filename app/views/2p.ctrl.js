@@ -29,7 +29,7 @@ export default class TwoPlayCtrl {
     this._updateDisplayedPlayer();
   }
   getNextColor() {
-    let color = this.starterTurn ? YELLOW : RED;
+    const color = this.starterTurn ? YELLOW : RED;
     this.starterTurn = !this.starterTurn;
     return color;
   }

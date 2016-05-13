@@ -4,23 +4,22 @@ import 'angular-material/angular-material.min.css';
 import './index.css';
 require('offline-plugin/runtime').install();
 
-
 import boardCmpt from './app/board.cmpt.js';
 import boardSrvc from './app/board.srvc.js';
 import TwoPlayCtrl from './app/views/2p.ctrl.js';
 import MenuCtrl from './app/views/menu.ctrl.js';
 
-let app = angular.module('app',  ['ngRoute', 'ngMaterial'])
-.component('boardCmpt',boardCmpt)
-.service('boardSrvc',boardSrvc)
-.controller('MainCtrl',function(){
+const app = angular.module('app', ['ngRoute', 'ngMaterial'])
+.component('boardCmpt', boardCmpt)
+.service('boardSrvc', boardSrvc)
+.controller('MainCtrl', function() {
   let vm = this;
   vm.text = 'Hello world!';
   vm.finishLoading = true;
   console.log(vm);
 })
-.controller('TwoPlayCtrl',TwoPlayCtrl)
-.controller('MenuCtrl',MenuCtrl)
+.controller('TwoPlayCtrl', TwoPlayCtrl)
+.controller('MenuCtrl', MenuCtrl)
 .config(['$routeProvider',
 function($routeProvider) {
   $routeProvider.

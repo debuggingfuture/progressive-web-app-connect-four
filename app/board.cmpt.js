@@ -2,8 +2,8 @@
 import template from './board.cmpt.html';
 import {colorMap} from './engine/colors.js';
 import {TURN, WON, RESTART} from './engine/events.js';
-let HEIGHT = 6;
-let WIDTH = 7;
+const HEIGHT = 6;
+const WIDTH = 7;
 
 export default class BoardCmptCtrl {
   constructor(boardSrvc, $scope) {
@@ -29,7 +29,7 @@ export default class BoardCmptCtrl {
   }
   refreshBoard() {
     this.discs = [];
-    let cells = this.boardSrvc.board.getCells();
+    const cells = this.boardSrvc.board.getCells();
     for (let i = 0; i < HEIGHT; i++) {
       for (let j = 0; j < WIDTH; j++) {
         this.discs.push(
@@ -51,7 +51,7 @@ export default class BoardCmptCtrl {
       return;
     }
 
-    let [insertedAt, won] = this.boardSrvc.board.dropDisc(this.currentColor, j);
+    const [insertedAt, won] = this.boardSrvc.board.dropDisc(this.currentColor, j);
     if (won) {
       this.blocked = true;
       this.$scope.$emit(WON);

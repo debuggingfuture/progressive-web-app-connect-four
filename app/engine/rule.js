@@ -1,8 +1,8 @@
 // favour check at each change instead of auxiliary memory for easier state managmenet
 // favour pure fx for the same
-let check = function(cells, color, i, j) {
-  let boardWidth = cells.size;
-  let boardHeight = cells.get(0).size;
+const check = function(cells, color, i, j) {
+  const boardWidth = cells.size;
+  const boardHeight = cells.get(0).size;
   if (arguments.length < 4) {
     throw Error('Missing parameters for cell');
   }
@@ -15,10 +15,10 @@ let check = function(cells, color, i, j) {
 // i,j: starting cell for checking
 // step: return a tuple
 // binary search, then closer first
-let checkFour = (cells, color, i, j, step) => {
-  let offsets = [2, 1, 3, -1];
+const checkFour = (cells, color, i, j, step) => {
+  const offsets = [2, 1, 3, -1];
 
-  let traversal = function(offsets) {
+  const traversal = function(offsets) {
     if (!check(cells, color, i, j)) {
       return false;
     }
@@ -43,16 +43,16 @@ let checkFour = (cells, color, i, j, step) => {
   return traversal(offsets) || traversal(offsets.map(o => o * -1));
 };
 
-let directions = [
+const directions = [
     [-1, -1],
     [-1, 0],
     [-1, 1],
     [0, -1]
 ];
 
-let stepFactory = (di, dj) => ((i, j, steps) => [i + (steps * di), j + steps * dj]);
+const stepFactory = (di, dj) => ((i, j, steps) => [i + (steps * di), j + steps * dj]);
 
-let checkAllDirections = (cells, color, i, j) => {
+const checkAllDirections = (cells, color, i, j) => {
   return directions.map(([di, dj]) =>
     checkFour(cells, color, i, j, stepFactory(di, dj)))
     .some(t => t);
