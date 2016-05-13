@@ -1,0 +1,10 @@
+CACHE MANIFEST
+#ver:5/13/2016, 10:02:54 PM
+
+CACHE:
+../app.js
+../vendors.js
+../
+
+NETWORK:
+*
