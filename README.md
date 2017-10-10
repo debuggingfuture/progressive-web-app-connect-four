@@ -1,7 +1,7 @@
 # progressive-web-app-connect-four
 
 ## Live Demo
-- Deployed at https://vincentlaucy.github.io/progressive-web-app-collect-four
+- Deployed at http://vincentlaucy.github.io/progressive-web-app-connect-four/
 
 ## start
 -  setup `npm install && npm install -g webpack`
